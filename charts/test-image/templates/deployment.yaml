@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: test-from-subchart
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: test-from-subchart
+    spec:
+      containers:
+      - name: test-from-subchart
+        image: nmakhotkin/test:0.2
