@@ -1,14 +1,14 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: test-from-subchart
+  name: {{ .Values.name }}
 spec:
   replicas: 2
   template:
     metadata:
       labels:
-        app: test-from-subchart
+        app: {{ .Values.name }}
     spec:
       containers:
-      - name: test-from-subchart
+      - name: {{ .Values.name }}
         image: nmakhotkin/test:0.2
