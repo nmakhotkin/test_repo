@@ -11,4 +11,4 @@ spec:
     spec:
       containers:
       - name: {{ .Values.name }}
-        image: nmakhotkin/test:0.2
+        image: "{{ printf "%s:%s" .Values.Image.Name .Values.Image.Tag}}"
