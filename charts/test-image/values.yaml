@@ -1,0 +1,4 @@
+name: default-name
+Image:
+  Name: nmakhotkin/test
+  Tag: latest
