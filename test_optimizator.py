@@ -21,9 +21,10 @@ def f(x):
 
 def main():
     parser = get_parser()
-    parser.parse_args()
+    args = parser.parse_args()
     
     checked_value = f(args.x)
+    print('f(%s) = %s' % (args.x, checked_value))
     m.update_task_info({'checked_value': float(checked_value)})
 
 
