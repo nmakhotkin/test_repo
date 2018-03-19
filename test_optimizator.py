@@ -3,8 +3,6 @@ import math
 
 from mlboardclient.api import client
 
-m = client.Client()
-
 
 def get_parser():
     parser = argparse.ArgumentParser()
@@ -29,7 +27,7 @@ def main():
     
     checked_value = f(args.x)
     print('f(%s) = %s' % (args.x, checked_value))
-    m.update_task_info({'checked_value': float(checked_value)})
+    client.update_task_info({'checked_value': float(checked_value)})
 
 
 if __name__ == '__main__':
