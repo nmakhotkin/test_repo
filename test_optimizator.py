@@ -5,6 +5,7 @@ from mlboardclient.api import client
 
 m = client.Client()
 
+
 def get_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -16,8 +17,10 @@ def get_parser():
     
     return parser
 
+
 def f(x):
     return math.exp(-(x - 2)**2) + math.exp(-(x - 6)**2/10) + 1/ (x**2 + 1)
+
 
 def main():
     parser = get_parser()
