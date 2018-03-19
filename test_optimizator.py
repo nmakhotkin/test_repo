@@ -12,7 +12,8 @@ def get_parser():
         '--argument',
         help='Define x for func',
         dest='x',
-        type=float
+        type=float,
+        default=0.0,
     )
     
     return parser
